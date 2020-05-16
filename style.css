@@ -97,7 +97,7 @@ body
     transform: scale(1.2);
 }
 
-.sticky1 .socialli:hover, .socialtw:hover, .socialig:hover, .socialfb:hover
+.sticky1 .socialli:hover, .sticky1 .socialtw:hover, .sticky1 .socialig:hover, .sticky1 .socialfb:hover
 {
     transform: none;
 }
