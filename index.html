@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My own art gallery</title>
+    <meta name="description" content="Project of online art gallery"/>
+    <meta name="keywords" content="art, gallery, photos, nature, urban, landscapes, portraits" />
+    
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="logo"><h1>My own art gallery</h1></div>
+
+            <div class="socials">
+
+                <div class="socialfb">
+                    <a class="socialicon" href="https://facebook.com" target="_blank"><i class="icon-facebook-squared"></i></a>
+                </div>
+
+                <div class="socialig">
+                    <a class="socialicon" href="https://instagram.com" target="_blank"><i class="icon-instagram"></i></a>
+                </div>
+
+                <div class="socialtw">
+                    <a class="socialicon" href="https://twitter.com" target="_blank"><i class="icon-twitter-squared"></i></a>
+                </div>
+
+                <div class="socialli">
+                    <a class="socialicon" href="https://linkedin.com" target="_blank"><i class="icon-linkedin-squared"></i></a>
+                </div>
+                
+
+            </div>
+
+        </header>
+
+        <nav>
+            <div class="navigation">
+
+                <button class="buttontxt" type="button"><a href="index.html">Home</a></button>
+                <button class="buttontxt" type="button"><a href="portrait.html">Portrait</a></button>
+                <button class="buttontxt" type="button"><a href="landscape.html">Landscape</a></button>
+                <button class="buttontxt" type="button"><a href="nature.html">Nature</a></button>
+                <button class="buttontxt" type="button"><a href="industrial.html">Industrial</a></button>
+                <button class="buttontxt" type="button"><a href="about.html">About</a></button>
+
+            </div>
+        </nav>
+
+        <main>
+            <article>
+                <div class="article">
+
+                    <h2>Definition of art</h2>
+
+                    <p>What is art? What is this thing that impresses both wise men and fools? This question often appears in places that have little to do with art. However, can we give any meaningful answer? Many say that art cannot be defined. Well, let me disagree with this view. I believe that art can be defined in at least several ways. We may not do it in one sentence, but we can definitely determine what we mean when we use the term: art.</p>
+                    
+                    <div class="pictures">
+
+                        <div class="industrial">
+                            <img src="img/industrialhome.jpg" alt="Industrial">
+                        </div>
+
+                        <div class="nature">
+                            <img src="img/naturehome.jpg" alt="Nature">
+                        </div>
+
+                        <div class="landscape">
+                            <img src="img/landscapehome.jpg" alt="Landscape">
+                        </div>
+                        <div style="clear: both;"></div>
+
+                    </div>
+
+                    <p>There is no universally accepted definition of art. We often use the word "art" to describe a beautiful object or ability to create an object with high aesthetic value. Looking this way, we could argue for hours about what art is. And we would probably have trouble achieving some satisfactory consensus.</br></br>Although there is no one universal definition of art, there is general agreement that it is a conscious action aimed at creating something beautiful or significant (in one way or another) using imagination and skills</p>
+                
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+
+        <div class="footer"><h3>Copyright 2020 &copy; all rights reserved</h3></div>
+
+    </footer>
+
+    <script src="js/jquery-3.5.0.min.js"></script>
+
+    <script>
+
+		$(document).ready(function() {
+		var stickyNavTop = $('.navigation').offset().top;
+		
+		var stickyNav = function(){
+		var scrollTop = $(window).scrollTop();
+		
+		if (scrollTop > stickyNavTop) {
+		$('.navigation').addClass('sticky');
+		} else {
+		$('.navigation').removeClass('sticky');
+		}
+		};
+		
+		stickyNav();
+		
+		$(window).scroll(function() {
+		stickyNav();
+		});
+		});
+		
+        </script>
+    
+</body>
+</html>

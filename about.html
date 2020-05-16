@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My own art gallery</title>
+    <meta name="description" content="Project of online art gallery"/>
+    <meta name="keywords" content="art, gallery, photos, nature, urban, landscapes, portraits" />
+    
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="js/jquery-3.5.0.min.js"></script>
+		
+		<script type="text/javascript">
+
+			var numer = Math.floor(Math.random()*3)+1;
+
+			var timer1 = 0;
+			var timer2 = 0;
+
+			function ustawslajd(nrslajdu)
+			{
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+				numer = nrslajdu -1;
+
+				schowaj();
+				setTimeout("zmienslajd()", 500);
+			}
+
+			function schowaj()
+			{
+				$("#slider").fadeOut(500);
+			}
+		
+			function zmienslajd()
+			{
+				numer++; if(numer>3) numer=1;
+
+				var plik = "<img src=\"img/example" + numer + ".jpg\" />";
+
+				document.getElementById("slider").innerHTML = plik;
+				$("#slider").fadeIn(500);
+
+				timer1 = setTimeout("zmienslajd()", 3000);
+				timer2 = setTimeout("schowaj()", 2500);
+			}
+
+		</script>
+
+</head>
+<body onload="zmienslajd()">
+    <div id="container">
+        <header>
+            <div class="logo"><h1>My own art gallery</h1></div>
+
+            <div class="socials">
+
+                <div class="socialfb">
+                    <a class="socialicon" href="https://facebook.com" target="_blank"><i class="icon-facebook-squared"></i></a>
+                </div>
+
+                <div class="socialig">
+                    <a class="socialicon" href="https://instagram.com" target="_blank"><i class="icon-instagram"></i></a>
+                </div>
+
+                <div class="socialtw">
+                    <a class="socialicon" href="https://twitter.com" target="_blank"><i class="icon-twitter-squared"></i></a>
+                </div>
+
+                <div class="socialli">
+                    <a class="socialicon" href="https://linkedin.com" target="_blank"><i class="icon-linkedin-squared"></i></a>
+                </div>
+                
+
+            </div>
+
+        </header>
+
+        <nav>
+            <div class="navigation">
+
+                <button class="buttontxt" type="button"><a href="index.html">Home</a></button>
+                <button class="buttontxt" type="button"><a href="portrait.html">Portrait</a></button>
+                <button class="buttontxt" type="button"><a href="landscape.html">Landscape</a></button>
+                <button class="buttontxt" type="button"><a href="nature.html">Nature</a></button>
+                <button class="buttontxt" type="button"><a href="industrial.html">Industrial</a></button>
+                <button class="buttontxt" type="button"><a href="about.html">About</a></button>
+
+            </div>
+        </nav>
+
+        <main>
+            <div class="container2">
+                <div class="aboutme">
+                    <h2>Who I am and what is this?</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus quam non est bibendum sollicitudin. Mauris quis imperdiet orci, et feugiat urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut ac congue ante, vitae imperdiet massa. Mauris enim diam, iaculis vel sodales non, iaculis ut nisi. Nulla faucibus ullamcorper diam quis imperdiet. Maecenas sit amet feugiat nibh, id mattis libero. Nullam fringilla congue consequat. Cras nec est id ante tincidunt sollicitudin. In sed enim sollicitudin, faucibus purus vitae, faucibus orci.
+                </div>
+
+                <div class="contact">
+                    If you want to learn more about my business or make contact, visit my socialmedia or contact me via email:
+                    <div class="email">
+                        john.snow@example.com
+                    </div>
+                </div>
+            </div>
+
+            <div class="myphoto">
+                
+                <div id="slider"></div>
+
+            </div>
+            <div style="clear: both;"></div>
+            
+        </main>
+    
+
+    <footer>
+
+        <div class="footer"><h3>Copyright 2020 &copy; all rights reserved</h3></div>
+
+    </footer>
+    </div>  
+    
+</body>
+</html>
