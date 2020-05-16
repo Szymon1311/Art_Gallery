@@ -9,10 +9,8 @@ body
 #container
 {
     width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
-    
+    margin: 0 auto;
 }
 
 .logo h1
@@ -99,6 +97,11 @@ body
     transform: scale(1.2);
 }
 
+.sticky1 .socialli:hover, .socialtw:hover, .socialig:hover, .socialfb:hover
+{
+    transform: none;
+}
+
 .navigation
 {
     background-image: url(img/nav.png);
@@ -123,6 +126,21 @@ body
     top: 0;
     z-index: 100;
 }
+
+.sticky1
+{
+    width: 1000px;
+    position: fixed;
+    left: 7%;
+    top: 50%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+}
+
+
+
 
 button
 {
@@ -154,6 +172,7 @@ button:hover
 .buttontxt a
 {
     text-decoration: none;
+    color: #000000;
 }
 
 .buttonnav
